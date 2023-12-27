@@ -1,8 +1,11 @@
-import Nav from "./Nav";
+// INTERNAL
+import Nav from "../Nav";
+// STYLES
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <img src="/Logo.svg" alt="Logo" />
       <Nav>
         <h3>Doormat Navigation</h3>

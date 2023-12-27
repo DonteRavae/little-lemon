@@ -1,11 +1,15 @@
-import Nav from "./Nav";
+// INTERNAL
+import Nav from "../Nav";
+import Icons from "../Icons/index";
+// STYLES
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.applicationHeader}>
       <img src="/Logo.svg" alt="Logo" />
-      <Nav>
-        <menu>
+      <Nav className={styles.headerNavigation}>
+        <menu className={styles.headerNavigationMenu}>
           <li>
             <a href="/">Home</a>
           </li>
@@ -26,6 +30,12 @@ export default function Header() {
           </li>
         </menu>
       </Nav>
+      <button className={styles.cart}>
+        <Icons type="cart" />
+      </button>
+      <button className={styles.responsiveMenu}>
+        <Icons type="hamburger-menu" />
+      </button>
     </header>
   );
 }
