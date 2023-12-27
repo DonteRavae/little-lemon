@@ -1,0 +1,13 @@
+.callToActionButton {
+  height: 60px;
+  width: 200px;
+  border-radius: 16px;
+  background: #f4ce14;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Karla Regular";
+  cursor: pointer;
+}
