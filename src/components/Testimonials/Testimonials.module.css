@@ -1,0 +1,31 @@
+.testimonials {
+  background: #ee9972;
+  padding: 10vh 15vw;
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: 36px;
+    font-weight: 500;
+    font-family: "Markazi Text";
+  }
+
+  .testimonialsSlider {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .testimonials {
+    padding: 5vh 5vw;
+
+    .testimonialsSlider {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+}

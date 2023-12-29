@@ -1,0 +1,62 @@
+.highlights {
+  padding: 50px 15vw;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "header menuCta"
+    "slider slider";
+
+  h1 {
+    grid-area: header;
+    font-size: 40px;
+    font-weight: 500px;
+    font-family: "Karla";
+    margin: auto;
+    margin-left: 0;
+  }
+
+  .highlightsSlider {
+    grid-area: slider;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 25px 25px;
+  }
+
+  button {
+    grid-area: menuCta;
+    margin: auto;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .highlights {
+    padding: 0;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+      "header header"
+      "slider slider"
+      "menuCta menuCta";
+
+    h1,
+    button {
+      margin: auto;
+    }
+
+    .highlightsSlider {
+      padding: 20px 0;
+      grid-auto-columns: 100%;
+      justify-items: center;
+      justify-content: start;
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

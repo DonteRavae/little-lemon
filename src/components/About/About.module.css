@@ -1,0 +1,99 @@
+.about {
+  min-height: 400px;
+  display: grid;
+  grid-template-areas: "info chefs";
+  padding: 5vh 15vw;
+
+  .aboutInfo {
+    grid-area: info;
+    width: 50%;
+
+    h1 {
+      color: #f4ce14;
+      font-size: 64px;
+      font-weight: 500;
+      font-family: "Markazi Text";
+      margin: 0;
+    }
+
+    h2 {
+      color: #495e57;
+      font-size: 40px;
+      font-weight: 500;
+      font-family: "Markazi Text";
+      margin-top: 0;
+    }
+
+    p {
+      color: #495e57;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Karla";
+      /* padding-right: 100px; */
+    }
+  }
+
+  .aboutImages {
+    grid-area: chefs;
+    position: relative;
+    width: 50%;
+
+    img {
+      position: absolute;
+      height: 250px;
+      border-radius: 16px;
+      box-shadow: 0 4px 4px #999;
+
+      &:first-child {
+        margin-top: 0;
+        right: 0;
+      }
+
+      &:last-child {
+        z-index: 3;
+        right: 11vw;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about {
+    padding: 5vh 5vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "chefs";
+
+    .aboutInfo {
+      width: 100%;
+      p {
+        width: 100%;
+      }
+    }
+
+    .aboutImages {
+      min-height: 400px;
+      width: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        height: 200px;
+        border-radius: 16px;
+        box-shadow: 0 4px 4px #999;
+
+        &:first-child {
+          margin-top: 5%;
+          right: 0;
+        }
+
+        &:last-child {
+          z-index: 3;
+          margin-top: 50%;
+          left: 0;
+        }
+      }
+    }
+  }
+}

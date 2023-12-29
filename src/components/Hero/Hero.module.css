@@ -1,0 +1,84 @@
+.hero {
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    ". . image image"
+    "title title image image "
+    "subtitle subtitle  image image"
+    "description .  image image"
+    "description .  image image"
+    "description .  image image"
+    "cta .  image image"
+    ". .  image image";
+  background: #495e57;
+  padding: 0 15vw;
+  align-items: center;
+
+  h1 {
+    grid-area: title;
+    margin: 0;
+    font-size: 64px;
+    color: #f4ce14;
+    font-family: "Markazi Text";
+    font-weight: 500;
+  }
+
+  h2 {
+    grid-area: subtitle;
+    margin: 0;
+    color: white;
+    font-size: 40px;
+    font-family: "Markazi Text";
+    font-weight: 400;
+  }
+
+  p {
+    grid-area: description;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Karla";
+  }
+
+  img {
+    grid-area: image;
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-left: auto;
+  }
+
+  button {
+    grid-area: cta;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    padding: 5vw 5vw;
+    grid-template-areas:
+      "title title title title"
+      "subtitle subtitle subtitle subtitle "
+      "description description  image image"
+      "description description  image image"
+      "description description  image image"
+      "description description  image image"
+      "description description  image image"
+      "cta cta  . .";
+
+    p {
+      width: 100%;
+      /* height: 80%; */
+      margin: auto;
+    }
+
+    img {
+      width: 95%;
+      height: 80%;
+    }
+  }
+}
