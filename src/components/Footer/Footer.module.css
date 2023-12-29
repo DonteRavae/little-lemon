@@ -1,4 +1,36 @@
 .footer {
-    background: #495e57;
-    padding: 5vh 15vw;
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  padding: 5vh 15vw;
+
+  h3 {
+    color: #f4ce14;
+  }
+
+  menu {
+    list-style: none;
+    padding: 0;
+    color: white;
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
