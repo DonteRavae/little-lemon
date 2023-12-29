@@ -11,3 +11,12 @@
   font-family: "Karla Regular";
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+  .callToActionButton {
+    height: 35px;
+    width: 150px;
+    margin: auto;
+    font-size: 1em;
+  }
+}
